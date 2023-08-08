@@ -280,3 +280,21 @@ SELECT * FROM User WHERE email = 'emily.taylor@example.com';
 DELETE FROM User WHERE email = 'emily.taylor@example.com';
 -- je vérifie si l'utilisateur à bien été supprimé
 SELECT * FROM User WHERE email = 'emily.taylor@example.com';
+
+-- Table Cinema
+-- 1 - CREATION : je crée un nouveau cinéma
+INSERT INTO cinema (name, address, phone, zip_code, email, country, created_at, updated_at, IDMultiplex, IDUser)
+VALUES ('City Cinema', '123 Main St', '1234567890', '10001', 'info@citycinema.com', 'France', NOW(), NOW(), 1, 1);
+
+-- 2 - READ : je vérifie la lecture du nouveau cinéma
+SELECT * FROM cinema WHERE name = 'City Cinema';
+
+-- 3 - UPDATE : je modifie les détails du cinéma
+UPDATE cinema SET phone = '0987654321' WHERE name = 'City Cinema';
+-- je vérifie la mise à jour avec la cde
+SELECT * FROM cinema WHERE name = 'City Cinema';
+
+-- 4 - DELETE : je supprime le nouveau cinéma
+DELETE FROM cinema WHERE name = 'City Cinema';
+-- je vérifie si le cinéma à bien été supprimé
+SELECT * FROM cinema WHERE name = 'City Cinema'; -- Doit retourner un résultat vide
