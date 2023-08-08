@@ -435,3 +435,12 @@ JOIN MovieRoom mr ON ms.IDMovieRoom = mr.id
 JOIN Cinema c ON mr.IDCinema = c.id
 WHERE DATE(ms.date) = '2023-09-10'
 AND c.name = 'Cinema 1';
+
+-- Liste des films projetés dans un cinéma avec heures des séances
+SELECT m.title, ms.start_time, ms.end_time, c.name AS cinema_name
+FROM Movie m
+JOIN MovieSession ms ON m.id = ms.IDMovie
+JOIN MovieRoom mr ON ms.IDMovieRoom = mr.id
+JOIN Cinema c ON mr.IDCinema = c.id
+WHERE DATE(ms.date) = '2023-08-24'
+AND c.name = 'Cinema 4';
