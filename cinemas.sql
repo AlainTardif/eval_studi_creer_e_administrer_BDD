@@ -337,3 +337,24 @@ SELECT * FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00';
 DELETE FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00';
 -- je vérifie si le MovieSession à bien été supprimé
 SELECT * FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00'; -- Doit retourner un résultat vide
+
+-- Table Customer
+-- 1 - CREATE: je crée un nouveau client dans la base de données Customer
+INSERT INTO Customer (last_name, first_name, email, phone, login, password, created_at)
+VALUES ('Doe', 'John', 'john.doe@example.com', '123-456-7890', 'johndoe', 'password123', NOW());
+
+-- 2 - READ: je Lis les informations du client existant
+SELECT * FROM Customer WHERE email = 'john.doe@example.com';
+
+-- 3 - UPDATE: je Modifie les informations du client existant
+UPDATE Customer
+SET phone = '098-765-4321', updated_at = NOW()
+WHERE email = 'john.doe@example.com';
+-- je vérifie que les modifs sont bien effectuées
+SELECT * FROM Customer WHERE email = 'john.doe@example.com';
+
+-- 4 - DELETE: je supprime le client existant
+DELETE FROM Customer WHERE email = 'john.doe@example.com';
+
+-- je vérifie si le client à bien été supprimé (vide)
+SELECT * FROM Customer WHERE email = 'john.doe@example.com';
