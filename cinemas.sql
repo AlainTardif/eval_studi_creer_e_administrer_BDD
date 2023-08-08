@@ -399,3 +399,23 @@ DELETE FROM Reservation WHERE numbers_of_places = 6;
 
 -- -- je vérifie si la réservation à bien été supprimé (vide)
 SELECT * FROM Reservation WHERE numbers_of_places = 6;
+
+-- Table PriceReservation
+-- 1 - CREATE: j'insère une nouvelle réservation de prix dans la base de données
+INSERT INTO PriceReservation (TTC, VAT, HT, numbers_of_places)
+VALUES (15.00, 2.50, 12.50, 5);
+
+-- 2 - READ: je lis les informations du prix de la nouvelle réservation 
+SELECT * FROM PriceReservation WHERE TTC = 15.00;
+
+-- 3 - UPDATE: je modifie les informations du prix de la réservation
+UPDATE PriceReservation
+SET TTC = 16.00
+WHERE TTC = 15.00;
+-- je vérifie si les modifs ont bien été effectuées
+SELECT * FROM PriceReservation WHERE TTC = 16.00;
+
+-- 4 - DELETE: je supprime le prix de la réservation
+DELETE FROM PriceReservation WHERE TTC = 16.00;
+-- -- je vérifie si le prix à bien été supprimé
+SELECT * FROM PriceReservation WHERE TTC = 16.00;
