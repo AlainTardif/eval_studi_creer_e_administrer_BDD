@@ -378,3 +378,24 @@ SELECT * FROM PriceList WHERE study = 8.50;
 DELETE FROM PriceList WHERE study = 8.50;
 -- je vérifie si le tarif à bien été supprimé
 SELECT * FROM PriceList WHERE study = 8.50;
+
+-- Table Reservation
+-- 1 - CREATE: j'insère une nouveelle réservation dans la base de données
+INSERT INTO Reservation (numbers_of_places, taxe, created_at, IDPriceReservation, IDMovieSession, IDPriceList, IDCustomer)
+VALUES (5, 2.50, NOW(), 1, 1, 1, 1);
+
+-- 2 - READ: je lis les informations de la réservation existante
+SELECT * FROM Reservation WHERE numbers_of_places = 5;
+
+-- 3 - UPDATE: je modifie les informations de la réservation existante
+UPDATE Reservation
+SET numbers_of_places = 6
+WHERE numbers_of_places = 5;
+-- je vérifie si les modifs ont bien été effectuées
+SELECT * FROM Reservation WHERE numbers_of_places = 6;
+
+-- 4 - DELETE: je supprime la réservation existante
+DELETE FROM Reservation WHERE numbers_of_places = 6;
+
+-- -- je vérifie si la réservation à bien été supprimé (vide)
+SELECT * FROM Reservation WHERE numbers_of_places = 6;
