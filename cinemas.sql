@@ -212,3 +212,19 @@ INSERT INTO PriceReservation (TTC, VAT, HT, numbers_of_places) VALUES
 (48.00, 8.00, 40.00, 4),
 (60.00, 10.00, 50.00, 5),
 (72.00, 12.00, 60.00, 6);
+
+-- Insertion des données dans la table 'PriceList'
+
+INSERT INTO PriceList (study, less_than_14, full_price) VALUES
+(8.00, 6.00, 10.00);
+
+
+-- Insertion des données dans la table 'Customer'
+
+INSERT INTO Customer (last_name, first_name, email, phone, login, password, created_at, updated_at) VALUES
+('Smith', 'John', 'john.smith@example.com', '1234567890', 'johnsmith', 'password1', NOW(), NOW()),
+('Doe', 'Jane', 'jane.doe@example.com', '0987654321', 'janedoe', 'password2', NOW(), NOW()),
+('Johnson', 'James', 'james.johnson@example.com', '1122334455', 'jamesjohnson', 'password3', NOW(), NOW()),
+('Brown', 'Emily', 'emily.brown@example.com', '2233445566', 'emilybrown', 'password4', NOW(), NOW()),
+('Davis', 'Michael', 'michael.davis@example.com', '3344556677', 'michaeldavis', 'password5', NOW(), NOW()),
+('Taylor', 'Sarah', 'sarah.taylor@example.com', '4455667788', 'sarahtaylor', 'password6', NOW(), NOW());
