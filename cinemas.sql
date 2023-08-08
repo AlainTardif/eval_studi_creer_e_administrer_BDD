@@ -172,3 +172,14 @@ INSERT INTO cinema (name, address, phone, zip_code, email, country, created_at, 
 ('Cinema 5', '654 Main St', '1234567894', '12345', 'cinema5@example.com', 'France', NOW(), NOW(), 1, 5),
 ('Cinema 6', '987 Main St', '1234567895', '12345', 'cinema6@example.com', 'France', NOW(), NOW(), 1, 6);
 
+-- Insertion des données dans la table 'Movie'
+
+INSERT INTO Movie (title, duration, description, created_at, updated_at) VALUES
+('Dune', '02:35', 'Adaptation du roman de science-fiction de Frank Herbert, Dune explore l''histoire de la famille Atreides et la planète Arrakis.', NOW(), NOW()),
+('No Time to Die', '02:43', 'Le dernier opus de James Bond, où l''agent 007 sort de sa retraite pour affronter un nouveau méchant.', NOW(), NOW()),
+('Black Widow', '02:14', 'Le film solo de Natasha Romanoff, explorant son passé et ses aventures entre les films "Civil War" et "Infinity War".', NOW(), NOW()),
+('Shang-Chi and the Legend of the Ten Rings', '02:12', 'Shang-Chi doit faire face à un passé qu''il croyait avoir laissé derrière lui lorsqu''il est attiré dans la toile de l''organisation des Dix Anneaux.', NOW(), NOW()),
+('The French Dispatch', '01:47', 'Un film d''anthologie du réalisateur Wes Anderson, racontant des histoires tirées du dernier numéro d''un magazine américain publié dans une ville française fictive.', NOW(), NOW()),
+('The Green Knight', '02:10', 'Un film de fantaisie épique qui raconte l''histoire de Sir Gawain et son défi face au mystérieux Chevalier Vert.', NOW(), NOW());
+
+
