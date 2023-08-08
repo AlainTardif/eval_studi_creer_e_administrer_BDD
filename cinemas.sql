@@ -182,4 +182,14 @@ INSERT INTO Movie (title, duration, description, created_at, updated_at) VALUES
 ('The French Dispatch', '01:47', 'Un film d''anthologie du réalisateur Wes Anderson, racontant des histoires tirées du dernier numéro d''un magazine américain publié dans une ville française fictive.', NOW(), NOW()),
 ('The Green Knight', '02:10', 'Un film de fantaisie épique qui raconte l''histoire de Sir Gawain et son défi face au mystérieux Chevalier Vert.', NOW(), NOW());
 
+-- Insertion des données dans la table 'MovieRoom'
+
+INSERT INTO MovieRoom (name, numero, numbers_of_places, created_at, updated_at, IDCinema) VALUES
+('Salle 1', 1, 100, NOW(), NOW(), 1),
+('Salle 2', 2, 150, NOW(), NOW(), 2),
+('Salle 3', 3, 200, NOW(), NOW(), 3),
+('Salle 4', 4, 250, NOW(), NOW(), 4),
+('Salle 5', 5, 300, NOW(), NOW(), 5),
+('Salle 6', 6, 350, NOW(), NOW(), 6);
+
 
