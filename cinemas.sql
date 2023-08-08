@@ -162,3 +162,13 @@ INSERT INTO user (last_name, first_name, email, phone, role, created_at, updated
 ('Davis', 'Sara', 'sara.davis@example.com', '1234567894', 'user', NOW(), NOW()),
 ('Miller', 'James', 'james.miller@example.com', '1234567895', 'admin', NOW(), NOW());
 
+-- Insertion des données dans la table 'cinema'
+
+INSERT INTO cinema (name, address, phone, zip_code, email, country, created_at, updated_at, IDMultiplex, IDUser) VALUES 
+('Cinema 1', '123 Main St', '1234567890', '12345', 'cinema1@example.com', 'France', NOW(), NOW(), 1, 1),
+('Cinema 2', '456 Main St', '1234567891', '12345', 'cinema2@example.com', 'France', NOW(), NOW(), 1, 2),
+('Cinema 3', '789 Main St', '1234567892', '12345', 'cinema3@example.com', 'France', NOW(), NOW(), 1, 3),
+('Cinema 4', '321 Main St', '1234567893', '12345', 'cinema4@example.com', 'France', NOW(), NOW(), 1, 4),
+('Cinema 5', '654 Main St', '1234567894', '12345', 'cinema5@example.com', 'France', NOW(), NOW(), 1, 5),
+('Cinema 6', '987 Main St', '1234567895', '12345', 'cinema6@example.com', 'France', NOW(), NOW(), 1, 6);
+
