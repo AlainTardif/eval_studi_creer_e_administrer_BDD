@@ -95,3 +95,17 @@ CREATE TABLE IF NOT EXISTS MovieSession
     FOREIGN KEY (IDMovieRoom) REFERENCES MovieRoom(id),
     FOREIGN KEY (IDMovie) REFERENCES Movie(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Table Customer
+CREATE TABLE IF NOT EXISTS Customer
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(15),
+    login VARCHAR(50),
+    password VARCHAR(50),
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
