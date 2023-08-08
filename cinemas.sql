@@ -533,3 +533,6 @@ INSERT INTO user (last_name, first_name, email, role, password, created_at, upda
 
 -- je lance l'import de la BDD avec la commande
 mysql -u root -p cinemas < cinemas.sql
+
+-- Après avoir exporté ma BDD, je la supprime
+DROP DATABASE cinemas;
