@@ -147,3 +147,8 @@ CREATE TABLE IF NOT EXISTS Reservation
     FOREIGN KEY (IDCustomer) REFERENCES Customer(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- j'insère des données pour la simulation et les tests pour mes tables
+-- Insertion des données dans la table 'multiplex'
+
+INSERT INTO multiplex (group_name) VALUES ('Multiplex Cinemas');
+
