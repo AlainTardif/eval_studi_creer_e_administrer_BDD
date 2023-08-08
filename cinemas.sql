@@ -128,3 +128,22 @@ CREATE TABLE IF NOT EXISTS PriceReservation
     HT DECIMAL NOT NULL,
     numbers_of_places INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Table Reservation
+CREATE TABLE IF NOT EXISTS Reservation
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    numbers_of_places INT NOT NULL,
+    taxe DECIMAL NOT NULL,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME,
+    IDPriceReservation INT NOT NULL,
+    IDMovieSession INT NOT NULL,
+    IDPriceList INT NOT NULL,
+    IDCustomer INT NOT NULL,
+    FOREIGN KEY (IDPriceReservation) REFERENCES PriceReservation(id),
+    FOREIGN KEY (IDMovieSession) REFERENCES MovieSession(id),
+    FOREIGN KEY (IDPriceList) REFERENCES PriceList(id),
+    FOREIGN KEY (IDCustomer) REFERENCES Customer(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
