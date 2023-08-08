@@ -318,3 +318,22 @@ SELECT * FROM MovieRoom WHERE name = 'Salle A';
 DELETE FROM MovieRoom WHERE name = 'Salle A';
 -- je vérifie si le MovieRoom à bien été supprimé
 SELECT * FROM MovieRoom WHERE name = 'Salle A'; -- Doit retourner un résultat vide
+
+
+-- Table MovieSession
+-- 1 - CREATION : je crée une nouvelle MovieSession
+INSERT INTO MovieSession (date, start_time, end_time, duration, IDMovieRoom, IDMovie)
+VALUES ('2023-08-01', '14:00', '16:00', '02:00', 1, 1);
+
+-- 2 - READ : je vérifie la lecture de MovieSession
+SELECT * FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00';
+
+-- 3 - UPDATE : je modifie les détails de MovieSession
+UPDATE MovieSession SET end_time = '16:30' WHERE date = '2023-08-01' AND start_time = '14:00';
+-- je vérifie si le MovieSession à bien été modifié
+SELECT * FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00';
+
+-- 4 - DELETE : je supprime la MovieSession
+DELETE FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00';
+-- je vérifie si le MovieSession à bien été supprimé
+SELECT * FROM MovieSession WHERE date = '2023-08-01' AND start_time = '14:00'; -- Doit retourner un résultat vide
