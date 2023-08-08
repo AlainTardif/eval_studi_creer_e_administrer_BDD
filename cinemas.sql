@@ -57,3 +57,14 @@ CREATE TABLE cinema (
     FOREIGN KEY (IDMultiplex) REFERENCES multiplex(id),
     FOREIGN KEY (IDUser) REFERENCES user(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Table Movie
+CREATE TABLE IF NOT EXISTS Movie
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    duration TIME,
+    description TEXT,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
