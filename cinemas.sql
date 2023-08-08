@@ -525,3 +525,8 @@ mysqldump -u root -p cinemas > cinemas.sql
 
 -- j'importe la BDD (si non existante, sinon je la crée avant) avec la commande
 CREATE DATABASE IF NOT EXISTS cinemas CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+
+-- j'insère les données hashés avec BCrypt
+INSERT INTO user (last_name, first_name, email, role, password, created_at, updated_at) VALUES ('LastNameAdmin', 'FirstNameAdmin', 'admin@example.com', 'admin', '$2b$10$v1aHdgyFUdTuh1CDBFriGO6WANnjCxn8iCcqHeE8KH5mVxYip3W1u', NOW(), NOW());
+INSERT INTO user (last_name, first_name, email, role, password, created_at, updated_at) VALUES ('LastNameUser', 'FirstNameUser', 'user@example.com', 'user', '$2b$10$6hyAQd48M.sLJqcZz/d1z.OaPXcMETKtrT3IaJ0HbUD2R2OIuRsZa', NOW(), NOW());
