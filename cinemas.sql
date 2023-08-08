@@ -489,3 +489,33 @@ GROUP BY
     m.id,
     r.id,
     s.id;
+
+
+-- Récupération des infos des Administrateurs
+SELECT 
+    id,
+    last_name,
+    first_name,
+    email,
+    phone,
+    role,
+    created_at,
+    updated_at
+FROM user
+WHERE role = 'admin';
+
+
+-- Récupération des infos des utilisateurs
+SELECT 
+    u.id,
+    u.last_name,
+    u.first_name,
+    u.email,
+    u.phone,
+    u.role,
+    u.created_at,
+    u.updated_at,
+    c.name AS cinema_name
+FROM user AS u
+JOIN cinema AS c ON u.id = c.IDUser
+WHERE u.role = 'user';
