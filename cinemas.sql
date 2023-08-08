@@ -19,3 +19,11 @@ GRANT ALL PRIVILEGES ON * . * TO 'admin3'@'localhost';
 -- je crée un utilisateur avec vue sur les données uniquement
 CREATE USER 'user3'@'localhost' IDENTIFIED BY 'ZqBpw5mqs3Ge';
 GRANT SELECT ON * . * TO 'user3'@'localhost';
+
+-- je crée mes tables : la première multiplex
+-- Table Multiplex
+CREATE TABLE IF NOT EXISTS multiplex
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    group_name VARCHAR(50) NOT NULL
+) ENGINE
