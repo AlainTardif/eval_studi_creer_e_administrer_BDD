@@ -358,3 +358,23 @@ DELETE FROM Customer WHERE email = 'john.doe@example.com';
 
 -- je vérifie si le client à bien été supprimé (vide)
 SELECT * FROM Customer WHERE email = 'john.doe@example.com';
+
+-- Table PriceList
+-- 1 - CREATE: j'insère un nouveau tarif dans la base de données
+INSERT INTO PriceList (study, less_than_14, full_price)
+VALUES (8.50, 6.00, 11.50);
+
+-- 2 - READ: je lis les informations du tarif existant
+SELECT * FROM PriceList WHERE study = 8.50;
+
+-- 3 - UPDATE: je modifie les informations du tarif existant
+UPDATE PriceList
+SET full_price = 12.00
+WHERE study = 8.50;
+-- je vérifie si les modifs ont bien été effectuées
+SELECT * FROM PriceList WHERE study = 8.50;
+
+-- 4 - DELETE: je supprime le tarif existant
+DELETE FROM PriceList WHERE study = 8.50;
+-- je vérifie si le tarif à bien été supprimé
+SELECT * FROM PriceList WHERE study = 8.50;
