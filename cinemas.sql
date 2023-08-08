@@ -40,3 +40,20 @@ CREATE TABLE IF NOT EXISTS user
     created_at DATETIME NOT NULL,
     updated_at DATETIME
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Table Cinema
+CREATE TABLE cinema (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    address VARCHAR(250) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    zip_code VARCHAR(5) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    country VARCHAR(50) NOT NULL,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME,
+    IDMultiplex INT NOT NULL,
+    IDUser INT NOT NULL,
+    FOREIGN KEY (IDMultiplex) REFERENCES multiplex(id),
+    FOREIGN KEY (IDUser) REFERENCES user(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
