@@ -519,3 +519,6 @@ SELECT
 FROM user AS u
 JOIN cinema AS c ON u.id = c.IDUser
 WHERE u.role = 'user';
+
+-- j'exporte ma BDD en tapant mes commandes dans le terminal de commande
+mysqldump -u root -p cinemas > cinemas.sql
