@@ -522,3 +522,6 @@ WHERE u.role = 'user';
 
 -- j'exporte ma BDD en tapant mes commandes dans le terminal de commande
 mysqldump -u root -p cinemas > cinemas.sql
+
+-- j'importe la BDD (si non existante, sinon je la crée avant) avec la commande
+CREATE DATABASE IF NOT EXISTS cinemas CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
