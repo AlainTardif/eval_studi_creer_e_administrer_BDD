@@ -228,3 +228,13 @@ INSERT INTO Customer (last_name, first_name, email, phone, login, password, crea
 ('Brown', 'Emily', 'emily.brown@example.com', '2233445566', 'emilybrown', 'password4', NOW(), NOW()),
 ('Davis', 'Michael', 'michael.davis@example.com', '3344556677', 'michaeldavis', 'password5', NOW(), NOW()),
 ('Taylor', 'Sarah', 'sarah.taylor@example.com', '4455667788', 'sarahtaylor', 'password6', NOW(), NOW());
+
+-- Insertion des données dans la table 'Reservation'
+
+INSERT INTO Reservation (numbers_of_places, taxe, created_at, updated_at, IDPriceReservation, IDMovieSession, IDPriceList, IDCustomer) VALUES
+(1, 2.00, NOW(), NOW(), 1, 1, 1, 1),
+(2, 4.00, NOW(), NOW(), 2, 2, 1, 2),
+(3, 6.00, NOW(), NOW(), 3, 3, 1, 3),
+(4, 8.00, NOW(), NOW(), 4, 4, 1, 4),
+(5, 10.00, NOW(), NOW(), 5, 5, 1, 5),
+(6, 12.00, NOW(), NOW(), 6, 6, 1, 6);
