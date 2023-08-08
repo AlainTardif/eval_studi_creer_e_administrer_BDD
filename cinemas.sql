@@ -152,3 +152,13 @@ CREATE TABLE IF NOT EXISTS Reservation
 
 INSERT INTO multiplex (group_name) VALUES ('Multiplex Cinemas');
 
+-- Insertion des données dans la table 'user'
+
+INSERT INTO user (last_name, first_name, email, phone, role, created_at, updated_at) VALUES 
+('Smith', 'John', 'john.smith@example.com', '1234567890', 'admin', NOW(), NOW()),
+('Doe', 'Jane', 'jane.doe@example.com', '1234567891', 'user', NOW(), NOW()),
+('Brown', 'Chris', 'chris.brown@example.com', '1234567892', 'user', NOW(), NOW()),
+('Johnson', 'Emily', 'emily.johnson@example.com', '1234567893', 'admin', NOW(), NOW()),
+('Davis', 'Sara', 'sara.davis@example.com', '1234567894', 'user', NOW(), NOW()),
+('Miller', 'James', 'james.miller@example.com', '1234567895', 'admin', NOW(), NOW());
+
