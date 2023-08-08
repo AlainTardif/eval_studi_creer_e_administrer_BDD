@@ -202,3 +202,13 @@ INSERT INTO MovieSession (date, start_time, end_time, duration, IDMovieRoom, IDM
 ('2023-09-04', '21:00', '23:15', '02:15', 4, 4),
 ('2023-09-05', '22:00', '23:50', '01:50', 5, 5),
 ('2023-09-06', '23:00', '01:05', '02:05', 6, 6);
+
+-- Insertion des données dans la table 'PriceReservation'
+
+INSERT INTO PriceReservation (TTC, VAT, HT, numbers_of_places) VALUES
+(12.00, 2.00, 10.00, 1),
+(24.00, 4.00, 20.00, 2),
+(36.00, 6.00, 30.00, 3),
+(48.00, 8.00, 40.00, 4),
+(60.00, 10.00, 50.00, 5),
+(72.00, 12.00, 60.00, 6);
