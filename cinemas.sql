@@ -27,3 +27,16 @@ CREATE TABLE IF NOT EXISTS multiplex
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     group_name VARCHAR(50) NOT NULL
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Table User
+CREATE TABLE IF NOT EXISTS user
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(15),
+    role ENUM('admin', 'user') NOT NULL,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
