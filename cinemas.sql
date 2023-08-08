@@ -68,3 +68,16 @@ CREATE TABLE IF NOT EXISTS Movie
     created_at DATETIME NOT NULL,
     updated_at DATETIME
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Table MovieRoom
+CREATE TABLE IF NOT EXISTS MovieRoom
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    numero INT NOT NULL,
+    numbers_of_places INT NOT NULL,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME,
+    IDCinema INT NOT NULL,
+    FOREIGN KEY (IDCinema) REFERENCES Cinema(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
