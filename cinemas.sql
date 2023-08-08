@@ -260,3 +260,23 @@ SELECT title, duration, description FROM Movie WHERE title = 'Space Odyssey';
 DELETE FROM Movie WHERE title = 'Space Odyssey';
 -- je vérifie si le film à bien été supprimé
 SELECT title, duration, description FROM Movie WHERE title = 'Space Odyssey';
+
+-- Table User
+-- 1 - CREATION : je crée un nouvel utilisateur
+INSERT INTO User (last_name, first_name, email, phone, role, created_at, updated_at)
+VALUES ('Taylor', 'Emily', 'emily.taylor@example.com', '1234567890', 'user', NOW(), NOW());
+-- je vérifie si l'utilisateur à bien été ajouté
+SELECT * FROM User WHERE email = 'emily.taylor@example.com';
+
+-- 2 - READ : je vérifie la lecture de l'utilisateur
+SELECT last_name, first_name, email, role FROM User WHERE email = 'emily.taylor@example.com';
+
+-- 3 - UPDATE : je modifie les détails de l'utilisateur
+UPDATE User SET phone = '0987654321' WHERE email = 'emily.taylor@example.com';
+-- je vérifie la mise à jour avec la cde
+SELECT * FROM User WHERE email = 'emily.taylor@example.com';
+
+-- 4 - DELETE : je supprime l'utilisateur
+DELETE FROM User WHERE email = 'emily.taylor@example.com';
+-- je vérifie si l'utilisateur à bien été supprimé
+SELECT * FROM User WHERE email = 'emily.taylor@example.com';
