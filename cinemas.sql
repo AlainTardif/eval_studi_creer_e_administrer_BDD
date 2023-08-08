@@ -463,3 +463,29 @@ JOIN Cinema c ON mr.IDCinema = c.id
 JOIN Movie m ON ms.IDMovie = m.id
 JOIN Customer cu ON r.IDCustomer = cu.id
 WHERE c.name = 'Cinema 3';
+
+-- Calculer le nbe de places restantes dans un cinéma spécifique pour une date daonnée
+SELECT
+    m.title AS movie_title,
+    r.name AS room_name,
+    s.date AS session_date,
+    s.start_time AS session_start_time,
+    (r.numbers_of_places - IFNULL(SUM(res.numbers_of_places), 0)) AS remaining_places
+FROM
+    MovieRoom r
+JOIN
+    Cinema c ON c.id = r.IDCinema
+JOIN
+    MovieSession s ON s.IDMovieRoom = r.id
+JOIN
+    Movie m ON m.id = s.IDMovie
+LEFT JOIN
+    Reservation res ON res.IDMovieSession = s.id
+WHERE
+    c.id = 1 -- ID du cinéma spécifique
+AND
+    s.date = '2023-08-24' -- Date spécifique
+GROUP BY
+    m.id,
+    r.id,
+    s.id;
