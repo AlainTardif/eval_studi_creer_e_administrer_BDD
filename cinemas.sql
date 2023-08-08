@@ -238,3 +238,25 @@ INSERT INTO Reservation (numbers_of_places, taxe, created_at, updated_at, IDPric
 (4, 8.00, NOW(), NOW(), 4, 4, 1, 4),
 (5, 10.00, NOW(), NOW(), 5, 5, 1, 5),
 (6, 12.00, NOW(), NOW(), 6, 6, 1, 6);
+
+-- j'exécute les tests CRUD 
+
+-- Sur la table Movie
+-- 1 - CREATION : ajout d'un nouveau film
+INSERT INTO Movie (title, duration, description, created_at, updated_at) 
+VALUES ('Space Odyssey', '02:45:00', 'A journey through space and time', NOW(), NOW());
+-- je vérifie si le film à bien été ajouté
+SELECT title, duration, description FROM Movie WHERE title = 'Space Odyssey';
+
+-- 2 - READ : je vérifie la lecture du film
+SELECT title, duration, description FROM Movie WHERE title = 'Space Odyssey';
+
+-- 3 - UPDATE : je modifie les détails du film
+UPDATE Movie SET description = 'A thrilling journey through space and time' WHERE title = 'Space Odyssey';
+-- je vérifie la mise à jour avec la cde
+SELECT title, duration, description FROM Movie WHERE title = 'Space Odyssey';
+
+-- 4 - DELETE : je supprime le film 
+DELETE FROM Movie WHERE title = 'Space Odyssey';
+-- je vérifie si le film à bien été supprimé
+SELECT title, duration, description FROM Movie WHERE title = 'Space Odyssey';
