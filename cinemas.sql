@@ -193,3 +193,12 @@ INSERT INTO MovieRoom (name, numero, numbers_of_places, created_at, updated_at, 
 ('Salle 6', 6, 350, NOW(), NOW(), 6);
 
 
+-- Insertion des données dans la table 'MovieSession'
+
+INSERT INTO MovieSession (date, start_time, end_time, duration, IDMovieRoom, IDMovie) VALUES
+('2023-09-01', '18:00', '20:00', '02:00', 1, 1),
+('2023-09-02', '19:00', '20:45', '01:45', 2, 2),
+('2023-09-03', '20:00', '21:30', '01:30', 3, 3),
+('2023-09-04', '21:00', '23:15', '02:15', 4, 4),
+('2023-09-05', '22:00', '23:50', '01:50', 5, 5),
+('2023-09-06', '23:00', '01:05', '02:05', 6, 6);
