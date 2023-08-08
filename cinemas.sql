@@ -444,3 +444,22 @@ JOIN MovieRoom mr ON ms.IDMovieRoom = mr.id
 JOIN Cinema c ON mr.IDCinema = c.id
 WHERE DATE(ms.date) = '2023-08-24'
 AND c.name = 'Cinema 4';
+
+-- Liste des places réservés par des clients dans un cinéma
+SELECT 
+    r.id AS reservation_id,
+    c.name AS cinema_name,
+    m.title AS movie_title,
+    mr.name AS room_name,
+    ms.start_time,
+    ms.end_time,
+    r.numbers_of_places AS reserved_places,
+    cu.last_name AS customer_last_name,
+    cu.first_name AS customer_first_name
+FROM Reservation r
+JOIN MovieSession ms ON r.IDMovieSession = ms.id
+JOIN MovieRoom mr ON ms.IDMovieRoom = mr.id
+JOIN Cinema c ON mr.IDCinema = c.id
+JOIN Movie m ON ms.IDMovie = m.id
+JOIN Customer cu ON r.IDCustomer = cu.id
+WHERE c.name = 'Cinema 3';
