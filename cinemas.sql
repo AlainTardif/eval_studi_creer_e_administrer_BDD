@@ -419,3 +419,10 @@ SELECT * FROM PriceReservation WHERE TTC = 16.00;
 DELETE FROM PriceReservation WHERE TTC = 16.00;
 -- -- je vérifie si le prix à bien été supprimé
 SELECT * FROM PriceReservation WHERE TTC = 16.00;
+
+
+-- Liste des films programmés pas dans tous les cinéma pour le (01.09.2023)
+SELECT m.title, ms.start_time, ms.end_time
+FROM Movie m
+JOIN MovieSession ms ON m.id = ms.IDMovie
+WHERE DATE(ms.date) = '2023-09-01';
