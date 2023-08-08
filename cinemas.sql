@@ -536,3 +536,16 @@ mysql -u root -p cinemas < cinemas.sql
 
 -- Après avoir exporté ma BDD, je la supprime
 DROP DATABASE cinemas;
+
+-- je révoque les accès et les privilèges de l'administrateur
+REVOKE ALL PRIVILEGES ON *.* FROM 'admin3'@'localhost';
+
+-- je supprime l'administrateur
+DROP USER 'admin3'@'localhost';
+ 
+
+-- je révoque les accès et les privilèges de l'utilisateur
+REVOKE ALL PRIVILEGES ON *.* FROM 'user3'@'localhost';
+
+-- je supprime l'utilisateur
+DROP USER 'user3'@'localhost';
