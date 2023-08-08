@@ -298,3 +298,23 @@ SELECT * FROM cinema WHERE name = 'City Cinema';
 DELETE FROM cinema WHERE name = 'City Cinema';
 -- je vérifie si le cinéma à bien été supprimé
 SELECT * FROM cinema WHERE name = 'City Cinema'; -- Doit retourner un résultat vide
+
+-- Table MovieRoom
+-- 1 - CREATION : je crée un nouveau MovieRoom
+INSERT INTO MovieRoom (name, numero, numbers_of_places, created_at, updated_at, IDCinema)
+VALUES ('Salle A', 1, 100, NOW(), NOW(), 1);
+-- je vérifie si le MovieRoom à bien été ajouté
+SELECT * FROM MovieRoom WHERE name = 'Salle A';
+
+-- 2 - READ : je vérifie la lecture du nouveau MovieRoom
+SELECT * FROM MovieRoom WHERE name = 'Salle A';
+
+-- 3 - UPDATE : je modifie les détails du MovieRoom
+UPDATE MovieRoom SET numbers_of_places = 120 WHERE name = 'Salle A';
+-- je vérifie si le MovieRoom à bien été modifié
+SELECT * FROM MovieRoom WHERE name = 'Salle A';
+
+-- 4 - DELETE : je supprime le MovieRoom
+DELETE FROM MovieRoom WHERE name = 'Salle A';
+-- je vérifie si le MovieRoom à bien été supprimé
+SELECT * FROM MovieRoom WHERE name = 'Salle A'; -- Doit retourner un résultat vide
